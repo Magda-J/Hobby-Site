@@ -9,6 +9,62 @@
   <body>
     <!-- the code below was obtained from https://freefrontend.com/tailwind-navbars/ -->
     <nav class="bg-pink-800">
+      <!-- Mobile menu button-->
+      <button
+        type="button"
+        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+      >
+        <span class="absolute -inset-0.5"></span>
+        <span class="sr-only">Open main menu</span>
+        <!--
+    Icon when menu is closed.
+
+    Menu open: "hidden", Menu closed: "block"
+  -->
+        <svg
+          class="block h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+        <!--
+    Icon when menu is open.
+
+    Menu open: "block", Menu closed: "hidden"
+  -->
+        <svg
+          class="hidden h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+
+      <div
+        class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+      >
+        <div class="flex flex-shrink-0 items-center"></div>
+      </div>
+      <!-- End of mobile menu code -->
+
       <div class="container mx-auto py-4 flex justify-between items-center">
         <a class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
           <img src="Pics/climbing.png" class="h-10" alt="My site logo" />
@@ -92,13 +148,41 @@
           >
         </div>
       </div>
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="sm:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <a
+            href="#"
+            class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+            aria-current="page"
+            >Dashboard</a
+          >
+          <a
+            href="#"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            >Team</a
+          >
+          <a
+            href="#"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            >Projects</a
+          >
+          <a
+            href="#"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            >Calendar</a
+          >
+        </div>
+      </div>
+      <!-- End of added code for mobile -->
     </nav>
 
     <h1 class="font-bold text-xl text-center shadow-md rounded-md p-4">
       A Beginner's Guide to Indoor Climbing and Bouldering Hobby Page
     </h1>
 
-    <div class="grid grid-cols-12">
+    <div class="grid md:grid-cols-12">
       <div class="grid col-span-2">
         <div class="flex flex-col">
           <ul class="shadow-md p-4 w-full md:w-64 h-76 mt-10 md:mt-0">
@@ -126,7 +210,7 @@
               <img
                 src="Pics/MJ.jpeg"
                 class="h-20 mx-16 mt-4"
-                alt="My site logo"
+                alt="Photo of myself"
               />
             </li>
           </ul>
@@ -140,8 +224,8 @@
               <a href="">Bouldering</a>
             </li>
             <li class="text-gray-800 text-justify">
-              Bouldering is a form of rock climbing, emphasizing
-              strength, agility, and mental acuity.
+              Bouldering is a form of rock climbing, emphasizing strength,
+              agility, and mental acuity.
             </li>
             <li class="mt-5 text-gray-800 font-bold">
               <a href="">Rope Climbing</a>
@@ -160,9 +244,9 @@
           What is Bouldering?
         </h1>
         <div class="grid grid-row">
-          <div class="grid grid-cols-4">
+          <div class="grid md:grid-cols-4">
             <p
-              class="shadow-md md:w-full h-64 text-justify text-gray-800 p-4 col-span-3"
+              class="shadow-md md:w-full h-64 text-justify text-gray-800 p-3 col-span-3 md:py-8 sm:text-justify"
             >
               Bouldering is a form of rock climbing that is typically performed
               on small rock formations or artificial climbing walls without the
@@ -187,7 +271,7 @@
             <img
               src="Pics/yns-plt-NY1D4Zni7fc-unsplash.jpg"
               class="h-full col-span-1"
-              alt="My site logo"
+              alt="Photo of a climber"
             />
           </div>
         </div>
@@ -199,10 +283,10 @@
             <img
               src="Pics/mike-kotsch-A9dNMBX9Zm4-unsplash.jpg"
               class="h-full col-span-1"
-              alt="My site logo"
+              alt="Photo of people bouldering"
             />
             <p
-              class="shadow-md md:w-full h-72 text-justify text-gray-800 p-4 col-span-3"
+              class="shadow-md md:w-full h-72 text-justify text-gray-800 p-3 col-span-3 md:py-8"
             >
               Bouldering offers a diverse range of physical, mental, and social
               benefits. As a full-body workout, it enhances strength, endurance,
@@ -262,5 +346,12 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      function toggleMobileMenu() {
+        var mobileMenu = document.getElementById("mobile-menu");
+        mobileMenu.classList.toggle("hidden");
+      }
+    </script>
   </body>
 </html>
