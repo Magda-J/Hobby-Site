@@ -10,7 +10,10 @@
    <!-- the code below was obtained from https://freefrontend.com/tailwind-navbars/ -->
     <nav class="bg-pink-800">
     <div class="container mx-auto py-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-gray-300">MyHobbyPage</h1>
+      <a class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+      <img src="Pics/climbing.png" class="h-10" alt="My site logo" />  
+      <h1 class="text-2xl font-semibold text-gray-300">MyHobbyPage</h1>
+       </a> 
         <div class="flex space-x-10">
         <div class="flex items-center space-x-2">
             <span>
@@ -49,10 +52,10 @@
     </nav>
  
     <h1 class="font-bold text-center shadow-md rounded-md p-4">
-       A begginer's guide to indours bouldering and bouldering hobby page   
+       A begginer's guide to indours climbing and bouldering hobby page   
     </h1>
-    <p>Parag</p>
-   
+    
+      
       <ul class="flex flex-col shadow-md p-4 w-full md:w-64 h-72 col-span-2 mt-10 md:mt-0">
         <li class="bg-rose-900 text-gray-300 font-bold pr-4 p-2 text-center rounded-md">Hobby Menu</li>
         <li class="mt-5 text-gray-800 font-bold"><a href="">Home</a></li>
@@ -68,12 +71,13 @@
       
     
     </main>
-    <footer class="bg-gray dark:bg-rose-900">
+    <!-- Footer fixed with the use of "inset-x-0 bottom-0", add source of the footer https://flowbite.com/docs/components/footer/ -->
+    <footer class="bg-gray dark:bg-rose-900 absolute inset-x-0 bottom-0">
         <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
             <div class="sm:flex sm:items-center sm:justify-between">
-                <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                    <img src="Pics/climbing.png" class="h-8" alt="Flowbite Logo" />
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">MyHobbyPage</span>
+                <a class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                    <img src="Pics/climbing.png" class="h-8" alt="My site logo" />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap text-gray-300">MyHobbyPage</span>
                 </a>
                 <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
                     <li>
@@ -86,15 +90,10 @@
                 </ul>
             </div>
             <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-            <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">MyHobbyPage</a>. All Rights Reserved.</span>
+            <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a class="hover:underline">MyHobbyPage</a>. All Rights Reserved.</span>
         </div>
     </footer>
 
-    <script>
-      function toggleMobileMenu() {
-        var mobileMenu = document.getElementById("mobile-menu");
-        mobileMenu.classList.toggle("hidden");
-      }
-    </script>
+
   </body>
 </html>
