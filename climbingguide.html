@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Here is the the code for the nav bar  -->
+    <nav class="bg-pink-800">
+      <div class="container mx-auto py-4 flex justify-between items-center">
+        <a
+          class="flex items-center mb-4 mr-0 lg:mr-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
+        >
+          <img src="Pics/climbing.png" class="h-10" alt="My site logo" />
+          <h1 class="text-2xl font-semibold text-gray-300">MyHobbyPage</h1>
+        </a>
+        <div class="w-16"></div>
+        <div class="flex space-x-10 hidden md:hidden lg:flex">
+          <div class="flex items-center space-x-2">
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                />
+              </svg>
+            </span>
+            <span class="text-gray-300 hover:underline"
+              ><a href="climbingguide.html">Climbing Guides</a></span
+            >
+          </div>
+          <div class="flex items-center space-x-2">
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012 2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+                />
+              </svg>
+            </span>
+            <span class="text-gray-300 hover:underline"
+              ><a href="">Climbing Equipment</a></span
+            >
+          </div>
+          <div class="flex items-center space-x-2">
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                />
+              </svg>
+            </span>
+            <span class="text-gray-300 hover:underline"
+              ><a href="">Climbing Centres & Community</a></span
+            >
+          </div>
+        </div>
+        <!-- Here is the code for the button in the nav bar -->
+        <div class="hidden lg:flex items-center">
+          <a href="index.html"
+            ><button
+              type="button"
+              data-te-ripple-init
+              data-te-ripple-color="light"
+              class="inline-block hidden sm:hidden md:block rounded w-full p-2 bg-white font-bold text-rose-900 shadow-[0_4px_9px_-4px_#3b71ca] ease-in-out hover:bg-rose-300"
+            >
+              Bact to Home Page
+            </button></a
+          >
+          <!-- End of the code for the button in the nav bar -->
+        </div>
+      </div>
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="lg:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+          <!-- Current: "bg-rose-900 text-white", Default: "text-gray-300 hover:bg-rose-300 hover:text-white" -->
+          <a
+            href="climbingguide.html"
+            class="text-gray-300 hover:bg-rose-300 text-white block rounded-md px-3 py-2 text-base font-medium"
+            aria-current="page"
+            >Climbing Guides</a
+          >
+          <a
+            href="#"
+            class="text-gray-300 hover:bg-rose-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            >Climbing Equipment</a
+          >
+          <a
+            href="#"
+            class="text-gray-300 hover:bg-rose-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            >Climbing Centres & Community</a
+          >
+          <a
+            href="index.html"
+            class="text-gray-300 border-2 hover:bg-rose-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            >Back to Home Page</a
+          >
+        </div>
+      </div>
+      <!-- End of added code for mobile -->
+    </nav>
+    <!-- End of the code for the nav bar -->
+    <h1 class="font-bold text-xl text-center shadow-md rounded-md p-4">
+      One of England's Oldest National Parks, the Peak District, is a Fantastic
+      Bouldering Destination
+    </h1>
+
+    <!-- Start of the code for the right column -->
+    <div class="grid col-span-12 lg:col-span-10 lg:mr-10">
+      <h1
+        class="font-bold text-center p-2 bg-transparent text-gray-800 md:w-full h-10"
+      >
+        Things to Keep in Mind While Bouldering in the Peak District
+      </h1>
+      <div class="grid grid-row">
+        <div class="grid md:grid-cols-4 space-y-5">
+          <div
+            class="shadow-md md:w-full text-justify text-gray-800 p-3 col-span-3 md:py-8"
+          >
+            Like many other regions, the increased popularity of bouldering in
+            recent years unfortunately resulted in some ground erosion,
+            particularly beneath popular bouldering sites. Employing bouldering
+            mats can effectively mitigate this issue and is strongly
+            recommended. Some areas have already lost their grass cover, and
+            it's crucial to take preventive measures to avoid similar
+            consequences elsewhere. Gritstone, being a relatively soft rock, is
+            susceptible to damage once its surface layer wears away. This often
+            occurs due to excessive brushing and chalk usage. Adhering to
+            general best practices is essential: Use chalk sparingly. Always
+            utilize bouldering mats. Stay on well-established paths. Gently
+            brush holds using plastic brushes.
+          </div>
+          <img
+            src="Pics/gregory-hayes-HO_unFmoRp0-unsplash.jpg"
+            class="sm:col-span-1 col-span-3 row-span-3 p-2 h-full"
+            alt="Photo of a climber"
+          />
+
+          <div
+            class="shadow-md md:w-full text-justify text-gray-800 p-3 col-span-3 md:py-8"
+          >
+            Embarking on your bouldering journey? Burbage South Valley provides
+            an excellent starting point. If you've honed your skills indoors,
+            this area is ideal for testing your outdoor capabilities for the
+            first time. South Valley presents a variety of challenges and
+            routes, all within a manageable height range to ensure secure
+            landings. It's the perfect spot to boost your confidence in an
+            outdoor setting.
+          </div>
+          <div
+            class="shadow-md md:w-full text-justify text-gray-800 p-3 col-span-3 md:py-8"
+          >
+            Discussing the Peak District wouldn't be complete without
+            highlighting the Stanage Area, particularly Stanage Plantation.
+            Renowned for its array of classics, the gritstone boulders in
+            Stanage Plantation stand out as the most famous in the UK. Nestled
+            just beneath the Stanage Edge, it can be succinctly described as a
+            field of problems reminiscent of The Pebble, known as the birthplace
+            of bouldering in the district. The Plantation typically features
+            higher graded problems from V5 and above, along with some more
+            approachable cruxes to engage novice and intermediate boulderers.
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-row">
+        <div class="grid md:grid-cols-1">
+          <h2
+            class="mb-2 text-md m-2 font-semibold text-gray-800"
+          >
+            Adhering to general best practices is essential:
+          </h2>
+          <ul
+            class="max-w-md m-2 col-span-1 text-gray-800 list-disc list-inside"
+          >
+            <li>Use chalk sparingly.</li>
+            <li>Always utilize bouldering mats.</li>
+            <li>Stay on well-established paths.</li>
+            <li>Gently brush holds using plastic brushes.</li>
+          </ul>
+        </div>
+      </div>
+      <h2
+        class="font-bold text-center p-2 text-gray-800 md:w-full h-10"
+      >
+        Which guide should I buy?
+      </h2>
+      <div class="grid grid-row">
+        <div class="grid md:grid-cols-4">
+          <img
+            src="Pics/alex-rhee-WY2TQdgD9MU-unsplash.jpg"
+            class="sm:col-span-1 col-span-3 h-full"
+            alt="Photo of people bouldering"
+          />
+          <p
+            class="shadow-md md:w-full text-justify text-gray-800 p-3 col-span-3 md:py-8"
+          >
+            For a thorough exploration, consider consulting the Peak District
+            Bouldering Guidebook authored by Rupert Davies and John Coefield.
+            This guidebook provides an extensive overview of various crags,
+            detailing what they have to offer, and encompasses over 3000
+            problems. Since the initial publication of the guidebook, problems
+            and crags in the Peak District have undergone revisiting, reviewing,
+            and revision. Davies and Coefield dedicated years to more extensive
+            research, ensuring the guide reflects the latest information on both
+            established and newly popular crags developed over the past six
+            years.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- End of the code for the right column -->
+    <!-- Start of the code for the footer -->
+    <footer class="bg-gray dark:bg-rose-900 sticky inset-x-0 bottom-0">
+      <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <a
+            class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
+          >
+            <img src="Pics/climbing.png" class="h-8" alt="My site logo" />
+            <span
+              class="self-center text-2xl font-semibold whitespace-nowrap text-gray-300"
+              >MyHobbyPage</span
+            >
+          </a>
+          <ul
+            class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400"
+          >
+            <li>
+              <a href="#" class="hover:underline me-4 md:me-6">Home</a>
+            </li>
+            <li>
+              <a href="climbingguide.html" class="hover:underline me-4 md:me-6"
+                >Climbing Guide</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- End of the code for footer -->
+  </body>
+</html>
