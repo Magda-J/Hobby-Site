@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Here is the the code for the nav bar  -->
+    <nav class="bg-pink-800">
+      <div class="container mx-auto py-4 flex justify-between items-center">
+        <a
+          class="flex items-center mb-4 mr-0 lg:mr-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
+        >
+          <img src="Pics/climbing.png" class="h-10" alt="My site logo" />
+          <h1 class="text-2xl font-semibold text-gray-300">MyHobbyPage</h1>
+        </a>
+        <div class="w-16"></div>
+        <div class="flex space-x-10 hidden md:hidden lg:flex">
+          <div class="flex items-center space-x-2">
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                />
+              </svg>
+            </span>
+            <span class="text-gray-300 hover:underline"
+              ><a href="climbingguide.html">Climbing Guides</a></span
+            >
+          </div>
+          <div class="flex items-center space-x-2">
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012 2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+                />
+              </svg>
+            </span>
+            <span class="text-gray-300 hover:underline"
+              ><a href="climbingeq.html">Climbing Equipment</a></span
+            >
+          </div>
+          <div class="flex items-center space-x-2">
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                />
+              </svg>
+            </span>
+            <span class="text-gray-300 hover:underline"
+              ><a href="">Climbing Centres & Community</a></span
+            >
+          </div>
+        </div>
+        <!-- Here is the code for the button in the nav bar -->
+        <div class="hidden lg:flex items-center">
+          <a href="index.html"
+            ><button
+              type="button"
+              data-te-ripple-init
+              data-te-ripple-color="light"
+              class="inline-block hidden sm:hidden md:block rounded w-full p-2 bg-white font-bold text-rose-900 shadow-[0_4px_9px_-4px_#3b71ca] ease-in-out hover:bg-rose-300"
+            >
+              Bact to Home Page
+            </button></a
+          >
+          <!-- End of the code for the button in the nav bar -->
+        </div>
+      </div>
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="lg:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+          <!-- Current: "bg-rose-900 text-white", Default: "text-gray-300 hover:bg-rose-300 hover:text-white" -->
+          <a
+            href="climbingguide.html"
+            class="text-gray-300 hover:bg-rose-300 text-white block rounded-md px-3 py-2 text-base font-medium"
+            aria-current="page"
+            >Climbing Guides</a
+          >
+          <a
+            href="climbingeq.html"
+            class="text-gray-300 hover:bg-rose-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            >Climbing Equipment</a
+          >
+          <a
+            href="#"
+            class="text-gray-300 hover:bg-rose-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            >Climbing Centres & Community</a
+          >
+          <a
+            href="index.html"
+            class="text-gray-300 border-2 hover:bg-rose-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            >Back to Home Page</a
+          >
+        </div>
+      </div>
+      <!-- End of added code for mobile -->
+    </nav>
+    <!-- End of the code for the nav bar -->
+    <h1 class="font-bold text-xl text-center shadow-md rounded-md p-4">
+      Must Have Bouldering Equipment
+    </h1>
+    <!-- Start of the code for the column -->
+    <h1
+      class="font-bold text-xl sm:text-center mb-0 mt-4 p-2 bg-transparent text-gray-800"
+    >
+      1. Climbing Chalk
+    </h1>
+    <div class="grid grid-row">
+      <div class="grid md:grid-cols-4 lg:mx-52">
+        <div
+          class="shadow-md md:w-full text-justify text-gray-800 p-3 col-span-3 md:py-8"
+        >
+          Climbing chalk consists primarily of powdered magnesium carbonate,
+          serving climbers by preventing sweaty hands and enhancing grip on
+          handholds. Various forms of bouldering chalk are accessible, such as
+          loose chalk, chalk balls, chalk blocks, and liquid chalk. Experiment
+          with these options to discover the climbing chalk that best suits your
+          preferences.
+        </div>
+        <img
+          src="Pics/steve-bruce-FQFHQMkzWG0-unsplash.jpg"
+          class="sm:col-span-1 col-span-3 p-2 h-full"
+          alt="Hand of a climber"
+        />
+      </div>
+    </div>
+
+    <h1
+      class="font-bold text-xl sm:text-center mb-0 mt-4 p-2 bg-transparent text-gray-800"
+    >
+      2. Bouldering Chalk Bag
+    </h1>
+    <div class="grid grid-row">
+      <div class="grid md:grid-cols-4 lg:mx-52">
+        <div
+          class="shadow-md md:w-full text-justify text-gray-800 p-3 col-span-3 md:py-8"
+        >
+          An indispensable gear item for bouldering is the climbing chalk bag.
+          This is where you store your climbing chalk, aiding in keeping your
+          hands dry and enhancing your grip on handholds. When selecting a chalk
+          bag, take into account factors like size, shape, and closure type. We
+          suggest opting for a bouldering bucket instead of a conventional
+          climbing chalk bag, as they feature a broader and more stable base,
+          enabling you to leave it on the ground while ascending the bouldering
+          wall.
+        </div>
+        <img
+          src="Pics/derick-anies-ZHsG61qr5ak-unsplash.jpg"
+          class="sm:col-span-1 col-span-3 p-2 h-full"
+          alt="Chalk bag"
+        />
+      </div>
+    </div>
+
+    <h1
+      class="font-bold text-xl sm:text-center mb-0 mt-4 p-2 bg-transparent text-gray-800"
+    >
+      3. Climbing Shoes
+    </h1>
+    <div class="grid grid-row">
+      <div class="grid md:grid-cols-4 lg:mx-52">
+        <div
+          class="shadow-md md:w-full text-justify text-gray-800 p-3 col-span-3 md:py-8"
+        >
+          Specialized footwear known as climbing shoes is crafted to offer the
+          required grip and support for climbing activities. With various styles
+          and designs available, it's crucial to select a pair that fits
+          properly and is comfortable to wear. Explore our comprehensive guide
+          on the top climbing shoes and determining the optimal tightness for
+          climbing footwear.
+        </div>
+        <img
+          src="Pics/lena-enz-D4MsgzandEw-unsplash(1).jpg"
+          class="sm:col-span-1 col-span-3 p-2 h-full"
+          alt="Climbing Shoes"
+        />
+      </div>
+    </div>
+
+    <h1
+      class="font-bold text-xl sm:text-center mb-0 mt-4 p-2 bg-transparent text-gray-800"
+    >
+      4. Bouldering Mat
+    </h1>
+    <div class="grid grid-row">
+      <div class="grid md:grid-cols-4 lg:mx-52">
+        <div
+          class="shadow-md md:w-full text-justify text-gray-800 p-3 col-span-3 md:py-8"
+        >
+          While unnecessary at an indoor bouldering wall, a bouldering mat
+          becomes crucial for outdoor bouldering. Functioning to cushion your
+          landing in case of a fall or slip, a high-quality bouldering crash pad
+          acts as your safeguard against an unplanned encounter with the ground.
+          Our Bouldering Pads are designed to connect together, forming a larger
+          protective barrier to reduce the risk of injuries. When selecting
+          crash pads, prioritize durability, portability, and effective
+          cushioning.
+        </div>
+        <img
+          src="Pics/chaewul-kim-Qx4wYUTvfNA-unsplash.jpg"
+          class="sm:col-span-1 col-span-3 p-2 h-full"
+          alt="Photo of a climber with mat"
+        />
+      </div>
+    </div>
+
+    <h1
+      class="font-bold text-xl sm:text-center mb-0 mt-4 p-2 bg-transparent text-gray-800"
+    >
+      5. Bouldering Brush
+    </h1>
+    <div class="grid grid-row">
+      <div class="grid md:grid-cols-4 lg:mx-52">
+        <div
+          class="shadow-md md:w-full text-justify text-gray-800 p-3 col-span-3 md:py-8"
+        >
+          Utilized for clearing handholds of surplus chalk, dirt, and debris, a
+          bouldering brush serves to enhance your grip and maintain the
+          integrity of both rock and holds. Opt for a brush featuring soft
+          bristles to avoid damaging holds or causing rock chips, which could
+          impact the route for others. Boar hair brushes, being the most
+          prevalent type of climbing brushes, prove effective on a variety of
+          hold types.
+        </div>
+        <img
+          src="Pics/jake-leonard-BxL_JqKTaA8-unsplash.jpg"
+          class="sm:col-span-1 col-span-3 p-2 h-full"
+          alt="Photo of a climber"
+        />
+      </div>
+    </div>
+
+    <!-- End of the code for the right column -->
+    <!-- Start of the code for the footer -->
+    <footer class="bg-gray dark:bg-rose-900 sticky inset-x-0 bottom-0">
+      <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <a
+            class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
+          >
+            <img src="Pics/climbing.png" class="h-8" alt="My site logo" />
+            <span
+              class="self-center text-2xl font-semibold whitespace-nowrap text-gray-300"
+              >MyHobbyPage</span
+            >
+          </a>
+          <ul
+            class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400"
+          >
+            <li>
+              <a href="#" class="hover:underline me-4 md:me-6">Home</a>
+            </li>
+            <li>
+              <a href="climbingguide.html" class="hover:underline me-4 md:me-6"
+                >Climbing Guide</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- End of the code for footer -->
+  </body>
+</html>
