@@ -7,16 +7,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <!-- the code below was obtained from https://freefrontend.com/tailwind-navbars/ -->
+    <!-- Here is the the code for the nav bar  -->
     <nav class="bg-pink-800">
-     
-
       <div class="container mx-auto py-4 flex justify-between items-center">
         <a class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
           <img src="Pics/climbing.png" class="h-10" alt="My site logo" />
           <h1 class="text-2xl font-semibold text-gray-300">MyHobbyPage</h1>
         </a>
-        <div class="flex space-x-10 hidden lg:flex">
+        <div class="flex space-x-10 hidden md:hidden lg:flex">
           <div class="flex items-center space-x-2">
             <span>
               <svg
@@ -81,7 +79,8 @@
             >
           </div>
         </div>
-        <div class="lg:flex items-center">
+        <!-- Here is the code for the button in the nav bar -->
+        <div class="hidden lg:flex items-center">
           <a href="https://www.depotclimbing.co.uk/sheffield/"
             ><button
               type="button"
@@ -89,47 +88,48 @@
               data-te-ripple-color="light"
               class="inline-block hidden sm:hidden md:block rounded w-full p-2 bg-white font-bold text-rose-900 shadow-[0_4px_9px_-4px_#3b71ca] ease-in-out hover:bg-rose-300"
             >
-              My Favourite Climbing Centre
+              My Favourite Climbing Centre Site
             </button></a
           >
+          <!-- End of the code for the button in the nav bar -->
         </div>
       </div>
       <!-- Mobile menu, show/hide based on menu state. -->
-      <div class="sm:hidden" id="mobile-menu">
+      <div class="lg:hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2">
-          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <!-- Current: "bg-rose-900 text-white", Default: "text-gray-300 hover:bg-rose-300 hover:text-white" -->
           <a
             href="#"
-            class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+            class="text-gray-300 hover:bg-rose-300 text-white block rounded-md px-3 py-2 text-base font-medium"
             aria-current="page"
-            >Dashboard</a
+            >Climbing Guides</a
           >
           <a
             href="#"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-            >Team</a
+            class="text-gray-300 hover:bg-rose-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            >Climbing Equipment</a
           >
           <a
             href="#"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-            >Projects</a
+            class="text-gray-300 hover:bg-rose-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            >Climbing Centres & Community</a
           >
           <a
-            href="#"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-            >Calendar</a
+            href="https://www.depotclimbing.co.uk/sheffield/"
+            class="text-gray-300 hover:bg-rose-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            >My Favourite Climbing Centre Site</a
           >
         </div>
       </div>
       <!-- End of added code for mobile -->
     </nav>
-
+    <!-- End of the code for the nav bar -->
     <h1 class="font-bold text-xl text-center shadow-md rounded-md p-4">
       A Beginner's Guide to Indoor Climbing and Bouldering Hobby Page
     </h1>
-
+    <!-- Start of the code for the left column -->
     <div class="grid md:grid-cols-12">
-      <div class="grid col-span-2">
+      <div class="grid col-span-8 sm:col-span-8 lg:col-span-2">
         <div class="flex flex-col">
           <ul class="shadow-md p-4 w-full md:w-64 h-76 mt-10 md:mt-0">
             <li
@@ -138,6 +138,7 @@
               Hobby Menu
             </li>
             <li class="mt-5 text-gray-800 font-bold">
+              <!-- Start of the code for the button -->
               <a href=""
                 ><button
                   type="button"
@@ -148,6 +149,7 @@
                   Home
                 </button></a
               >
+              <!-- End of the button code -->
             </li>
             <li class="mt-5 text-gray-800 font-bold text-center">About</li>
             <li class="text-gray-800 text-justify">
@@ -155,7 +157,7 @@
               bouldering and hiking.
               <img
                 src="Pics/MJ.jpeg"
-                class="h-20 mx-16 mt-4 rounded"
+                class="h-20 mx-40 md:mx-16 mt-4 rounded"
                 alt="Photo of myself"
               />
             </li>
@@ -183,7 +185,9 @@
           </ul>
         </div>
       </div>
-      <div class="grid col-span-9">
+      <!-- End of the code for the left column -->
+      <!-- Start of the code for the right column -->
+      <div class="grid col-span-10 mr-10">
         <h1
           class="font-bold text-center p-2 bg-transparent text-gray-800 md:w-full h-10"
         >
@@ -192,7 +196,7 @@
         <div class="grid grid-row">
           <div class="grid md:grid-cols-4">
             <p
-              class="shadow-md md:w-full text-justify text-gray-800 p-3 col-span-3 md:py-8 sm:text-justify"
+              class="shadow-md md:w-full text-justify text-gray-800 p-3 col-span-3 md:py-8"
             >
               Bouldering is a form of rock climbing that is typically performed
               on small rock formations or artificial climbing walls without the
@@ -232,7 +236,7 @@
               alt="Photo of people bouldering"
             />
             <p
-              class="shadow-md md:w-full text-justify text-gray-800 p-3 col-span-3 md:py-8 sm:text-justify"
+              class="shadow-md md:w-full text-justify text-gray-800 p-3 col-span-3 md:py-8"
             >
               Bouldering offers a diverse range of physical, mental, and social
               benefits. As a full-body workout, it enhances strength, endurance,
@@ -263,9 +267,11 @@
         </div>
       </div>
     </div>
-
-    <!-- Footer fixed with the use of "inset-x-0 bottom-0", add source of the footer https://flowbite.com/docs/components/footer/ -->
-    <footer class="bg-gray dark:bg-rose-900 sticky lg:absolute inset-x-0 bottom-0">
+    <!-- End of the code for the right column -->
+    <!-- Start of the code for the footer -->
+    <footer
+      class="bg-gray dark:bg-rose-900 sticky 2xl:absolute inset-x-0 bottom-0"
+    >
       <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div class="sm:flex sm:items-center sm:justify-between">
           <a
@@ -292,6 +298,6 @@
         </div>
       </div>
     </footer>
-
+    <!-- End of the code for footer -->
   </body>
 </html>
